@@ -1,0 +1,380 @@
+<!doctype html>
+<!-- HTMl5 app created by Matthew Testerman 7/18/16 -->
+<!-- do: video, and image, fix links for youtube and linkedin AND DONE!  --> 
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>My ePortfolio</title>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="assets/jquery-2.2.4.min.js"></script>
+        <script src="assets/jquery-ui.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+
+        <!-- Custom CSS -->
+        <link rel="stylesheet" type="text/css" href="assets/style.css">
+        <link href='https://fonts.googleapis.com/css?family=Abel' rel='stylesheet' type='text/css'>
+
+        <!-- Font Awesome -->
+        <link href="assets/font-awesome-4.6.3/css/font-awesome.min.css" rel="stylesheet">
+       
+        <!-- IE shiv -->
+        <!--[if IE]>
+        <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+        
+        <script>
+            $(document).ready(function () {
+                $('body').animate({'opacity': '1'}, 900);
+                /* Every time the window is scrolled ... */
+                // Add smooth scrolling to all links in navbar + footer link
+                $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+
+                    // Make sure this.hash has a value before overriding default behavior
+                    if (this.hash !== "") {
+
+                        // Prevent default anchor click behavior
+                        event.preventDefault();
+
+                        // Store hash
+                        var hash = this.hash;
+
+                        // Using jQuery's animate() method to add smooth page scroll
+                        // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                        $('html, body').animate({
+                            scrollTop: $(hash).offset().top
+                        }, 900, function () {
+
+                            // Add hash (#) to URL when done scrolling (default click behavior)
+                            window.location.hash = hash;
+                        });
+                    } // End if
+                });
+                $(window).scroll(function () {
+                    $(".slideanim").each(function () {
+                        var pos = $(this).offset().top;
+
+                        var winTop = $(window).scrollTop();
+                        if (pos < winTop + 600) {
+                            $(this).addClass("slide");
+                        }
+                    });
+                });
+                $(window).scroll(function () {
+                    $(".slideanimXrl").each(function () {
+                        var pos = $(this).offset().top;
+
+                        var winTop = $(window).scrollTop();
+                        if (pos < winTop + 600) {
+                            $(this).addClass("slideXrl");
+                        }
+                    });
+                });
+                $(window).scroll(function () {
+                    $(".slideanimXlr").each(function () {
+                        var pos = $(this).offset().top;
+
+                        var winTop = $(window).scrollTop();
+                        if (pos < winTop + 600) {
+                            $(this).addClass("slideXlr");
+                        }
+                    });
+                });
+            });
+        </script>
+    </head>
+
+    <body>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-default navbar-fixed-top">
+            <div class="container-fluid">
+                <div  class="navbar-header">
+                    <button type="button" class="navbar-toggle pull-left" data-toggle="collapse" data-target="#myNavbar"> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                    <a class="navbar-brand hidden-xs"  href="#"><img height="20" src="assets/logo.png" alt="MT" /></a> <a class="navbar-brand pull-right visible-xs"  href="#"><img style="img-responsive" height="20" src="assets/logo.png" alt="MT" /></a> </div>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav navbar-right">
+                        <li><a href="#home"><span class="glyphicon glyphicon-home"></span></a></li>
+                        <li><a href="#about-me-cards">TECHNICAL SKILLS</a></li>
+                        <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">MY WORK <span class="caret"></span> </a>
+                            <ul class="dropdown-menu">		
+                                <li><a href="#workBio">WORK HISTORY</a></li>
+                                <li><a href="#samWork">SAMPLE WORK</a></li>			
+                            </ul>
+                        </li>	
+                        <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown" href="#">METHODOLOGIES <span class="caret"></span> </a>
+                            <ul class="dropdown-menu">
+                                <li><a href="#stand">DEVELOPING STANDARDS</a></li>
+                                <li><a href="#comm">COMMUNICATIONS!</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#contact">CONTACT</a></li>		
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+            <!-- Fire (Main) Image -->
+            <div id="home" class="carousel-inner">
+                <div class="item active"> <img src="assets/main-image1.png" alt="Main Profile Image">
+                    <div class="carousel-caption pull-left">
+                        <h2>"Choose a job you love, and you will never have to work a day in your life."</h2>
+                        <h3>&mdash;Confucius</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Snap Shot -->
+            <div id="about-me-cards" class="container-fluid text-center">
+                <h2 class="slideanim"><i class="fa fa-cog " aria-hidden="true"></i> Technical Skills</h2>
+                <h4 class="slideanim">"Knowledge is power. Information is liberating. Education is the premise of progress, in every society, in every family." &mdash;Kofi Annan</h4>
+                <div class="row text-center">
+                    <div class="col-sm-4 slideanimXlr">
+                        <div class=" thumbnail"> <img src="assets/skill-set-web.png" alt="Skill" />
+                            <div class="thumbnail-foot">
+                                <h3><i class="fa fa-globe" aria-hidden="true"></i> Web Development</h3>
+                                <p>HTML 5.0, JavaScript(JQuery 2.0),CSS 3.0 (Bootstrap 3.0)</p>
+                                <p>PHP, Java, .NET (C#, VB), Perl, XSLT</p>
+                                <p>Oracle, MySQL</p>
+                                <p>CMS (Wordpress, Adobe), Restful Web Services</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 slideanim">
+                        <div class=" thumbnail"> <img src="assets/skill-set-method.png" alt="Skill Set" />
+                            <div class="thumbnail-foot">
+                                <h3><i class="fa fa-sitemap" aria-hidden="true"></i> Methodologies</h3>
+                                <p>Agile (Scrum), Waterfall Development</p>
+                                <p>Object Oriented Programming, MVC, SCORM</p>
+                                <p>Data Normalization</p>
+                                <p>Diagraming Dataflow, ERD, UML, and basic Mockups.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-4 slideanimXrl">
+                        <div class=" thumbnail"><img src="assets/creativity.png" alt="Creativity " >
+                            <div class="thumbnail-foot" >
+                                <h3><i class="fa fa-wpforms" aria-hidden="true"></i> Software</h3>
+                                <p>Visual Studio 2015, Eclipse, netBeans</p>
+                                <p>Oracle Developer/Forms, Mysql Workbench/SQL Plus</p>
+                                <p>Windows/Mac OS X/Red Hat Linux</p>
+                                <p>Adobe Photoshop/Illustrator</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bio (Work History) -->
+            <div id="workBio">
+                <div class="carousel-inner hidden-xs hidden-sm slideanim">
+                    <div class="item active"> <img src="assets/profile-pic.png" alt="Sub Profile Image">
+                        <div class="carousel-caption  visible-lg" style="top: 0; bottom: auto; right: 20px; left: auto; text-align: left; background-color: rgba(160,3,0,0.80); padding: 10px;">
+                            <div style=" width: 400px" >
+                                <h1 >Work History</h1>
+                                <p>Hello and thank you for visiting my ePortfolio! I'm Matthew Testerman and I currently reside in Virgina. I am a fan of the outdoors where I enjoy hiking and fitness. I am also a
+                                    fan of urban lifestyles as well and seek to move to a city. I am passionate in what I do and enjoy making a deference! I enjoy working with people and do well groups. I regularly thirst for knowledge and I.T.
+                                    is ever changing which provides infinite learning. This is why I chose the field of I.T. </p>          
+                                <p>Let me tell you about my background in the world of Information
+                                    Technology. For starters, I obtained a Bachelors of Science in Web Development from Radford University (I also have an associates in Information Technology). </p>
+                                <p>With the education in hand, I worked at Southwestern Virginia Mental Health Institute where I rebuilt their Intranet and Internet websites, developed Learning Management Modules(SCORM), and did web design training. During college, I also worked as a Web Administrator where I worked on different CMS systems. And finally, I work at Longwood University as a Software Developer where I improved exisiting and new systems. I manage and create SQL queries/packages in Oracle, manage .net (c#, vb.net) applications, and work with web frameworks such as boostrap and jquery. Additionally, I maintain third party applications where I do additional maitenance using XSLT and Perl. </p>
+                                <p>My current goal in I.T. is to stay within the software/web developer field. I am moving to the pacific northwest very soon and I aim to continue my I.T. career. Thanks for stopping by!</p>
+                            </div>
+                        </div>
+                        <div class="carousel-caption visible-md " style="background-color: rgba(160,3,0,0.80); padding: 10px; width: 900px;">
+                            <div>
+                                <h1 >Work History</h1>
+                                <p>Hello and thank you for visiting my ePortfolio! I'm Matthew Testerman and I currently reside in Virgina. I am a fan of the outdoors where I enjoy hiking and fitness. I am also a
+                                    fan of urban lifestyles as well and seek to move to a city. I am passionate in what I do and enjoy making a difference! I enjoy working with people and do well groups. I regularly thirst for knowledge and I.T.
+                                    is ever changing which provides infinite learning. This is why I chose the field of I.T. </p>          
+                                <p>Let me tell you about my background in the world of Information
+                                    Technology. For starters, I obtained a Bachelors of Science in Web Development from Radford University (I also have an associates in Information Technology). </p>
+                                <p>With the education in hand, I worked at Southwestern Virginia Mental Health Institute where I rebuilt their Intranet and Internet websites, developed Learning Management Modules(SCORM), and did web design training. During college, I also worked as a Web Administrator where I worked on different CMS systems. And finally, I work at Longwood University as a Software Developer where I improved exisiting and new systems. I manage and create SQL queries/packages in Oracle, manage .net (c#, vb.net) applications, and work with web frameworks such as boostrap and jquery. Additionally, I maintain third party applications where I do additional maitenance using XSLT and Perl. </p>
+                                <p>My current goal in I.T. is to stay within the software/web developer field. I am moving to the pacific northwest very soon and I aim to continue my I.T. career. Thanks for stopping by!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>                
+                <div  style="padding: 0; margin: 0;" class="block-standard visible-xs visible-sm">
+                    <div class="container-fluid" style="padding-top: 25px; padding-bottom: 25px;">
+                        <div  class="row">
+                            <div class="col-md-5 text-center hidden-xs"><p style="font-size: 250px;"><i class="fa fa-user" aria-hidden="true"></i></p></div>
+                            <div class="col-md-7 col-xs-12 " style="">
+                                <h2>Work History</h2>
+                                <p>Hello and thank you for visiting my ePortfolio! I'm Matthew Testerman and I currently reside in Virgina. I am a fan of the outdoors where I enjoy hiking and fitness. I am also a
+                                    fan of urban lifestyles as well and seek to move to a city. I am passionate in what I do and enjoy making a diference! I enjoy working with people and do well groups. I regularly thirst for knowledge and I.T.
+                                    is ever changing which provides infinite learning. This is why I chose the field of I.T. </p>          
+                                <p>Let me tell you about my background in the world of Information
+                                    Technology. For starters, I obtained a Bachelors of Science in Web Development from Radford University (I also have an associates in Information Technology). </p>
+                                <p>With the education in hand, I worked at Southwestern Virginia Mental Health Institute where I rebuilt their intranet and internet websites, developed Learning Management Modules(SCORM), and did web design training. During college, I also worked as a Web Administrator where I worked on different CMS systems. And finally, I work at Longwood University as a Software Developer where I improved exisiting and new systems. I manage and create SQL queries/packages in Oracle, manage .net (c#, vb.net) applications, and work with web frameworks such as boostrap and jquery. Additionally, I maintain third party applications where I do additional maitenance using XSLT and Perl. </p>
+                                <p>My current goal in I.T. is to stay within the software/web developer field. I am moving to the pacific northwest very soon and I aim to continue my I.T. career. Thanks for stoping by!</p>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+            </div>	
+
+            <!--Developer standards-->
+            <div id="stand" class="block-standard" style="padding-top: 100px;padding-bottom:100px;" >
+                <div class="container-fluid text-center" style="padding-top: 25px; padding-bottom: 25px;">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <div class="row" style="padding-bottom: 75px;">
+                                <div class="col-sm-12 text-center slideanim ">
+                                    <h1><span class="glyphicon glyphicon-tasks"></span> My Development Standards</h1>
+                                    <p>&fnof;(x) = Security > Quality > Performance</p>
+                                </div>
+                            </div>
+                            <div class="row text-center">
+                                <div class="col-sm-4 slideanimXlr"><span class="glyphicon glyphicon-lock medium-icon" ></span><br />
+                                    <h2>Security</h2>
+                                    <p>Security is priority #1! I develop to allow confidentiality,<br /> integrity and availability.</p>
+                                </div>
+                                <div class="col-sm-4 slideanim"><span class="glyphicon glyphicon-ok medium-icon"></span><br />
+                                    <h2>Quality</h2>
+                                    <p>Meeting end user expectations, following proper conventions, avoiding redundancy, and using<br /> effective communication will build a successful product!</p>
+                                </div>
+                                <div class="col-sm-4 slideanimXrl"><span class="glyphicon glyphicon-equalizer medium-icon"></span><br />
+                                    <h2>Performance</h2>
+                                    <p>Preventing scope creep by effectively planning to meet deliverables will improve performance!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bridge Image -->
+            <div class="carousel-inner slideanim">
+                <div class="item active"> <img src="assets/bridge-back.png" alt="Sub Profile Image">
+                    <div class="carousel-caption" style="transform: translateX(0%);">
+                        <h2>"Life is a journey that must be traveled no matter how bad the roads and accommodations."</h2>
+                        <h3>&mdash;Oliver Goldsmith</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!--- Communications -->
+            <div id="comm" class="block-standard">
+                <div class="container-fluid text-center" style="padding-top: 100px;padding-bottom:100px;">
+                    <div class="row">
+                        <div class="col-sm-12 slideanim">
+                            <h2><i class="fa fa-microphone" aria-hidden="true"></i> + <i class="fa fa-headphones" aria-hidden="true"></i> Talk the Tech</h2>
+                            <h4>"Communication - the human connection - is the key to personal and career success." &#8212; Paul J. Meyer </h4>
+                            <p>I belive communication is one of the most important aspects of a job. I believe miscommunication affects the quality and the speed of the good or service. This is why I am very engages in asking questions (in moderation) -- this could save time! If I see any potential problems then I will let this person know -- this reduces scope creep. Professional communications build healthy relationships to create a healthy workplace.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!--Image needs to go here -->
+                        <div class="carousel-inner slideanim">
+                <div class="item active"> <img src="assets/nightlife.png" alt="Sub Profile Image">
+                    <div class="carousel-caption" style="transform: translateX(-30%);">
+                        <h2>"Coming together is a beginning; keeping together is progress; working together is success."</h2>
+                        <h3>&mdash;Henry Ford</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sample Work -->
+            <div id="samWork" class="block-standard" style="padding-top: 100px;padding-bottom:100px;">
+                <div class="container-fluid">
+                    <div class="row slideanim" style="padding-bottom: 50px;">
+                        <div class="col-sm-12 text-center ">
+                            <h1><i class="fa fa-cogs" aria-hidden="true"></i> Sample Work</h1>
+                            <p>"Working hard and working smart sometimes can be two different things." &mdash;Byron Dorgan</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 slideanimXlr  text-center">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/D2nyPl3bOuc" allowfullscreen></iframe>
+                            </div>
+                            <h2>Web Services (REST)</h2>
+                            <p>I demonstrate how I use web services.</p>
+                            <p><i class="fa fa-file-archive-o" aria-hidden="true"></i> <a href="assets/GruHAM.zip">Source Code</a></p>
+                        </div>
+                        <div class="col-sm-6 slideanimXrl  text-center">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/X5KvmjZItOY" allowfullscreen></iframe>
+                            </div>
+                            <h2>Responsive Mobile Design</h2>
+                            <p>Demonstrating the use of bootstrap 3.0.</p>
+                            <p><a href="#"><i class="fa fa-file-archive-o" aria-hidden="true"></i> Source Code</a></p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-6 slideanimXlr  text-center">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/hTskE1yfA8A" allowfullscreen></iframe>
+                            </div>
+                            <h2>Object Oriented and MVC</h2>
+                            <p>A game made I created in JAVA based off of &quot;Number Muncher&quot;.</p>
+                            <p><a href="assets/Number-Muncher-Matthew-Testerman.zip"><i class="fa fa-file-archive-o" aria-hidden="true"></i> Source Code</a></p>    
+                        </div>
+                        <div class="col-sm-6 slideanimXrl  text-center">
+                            <div class="embed-responsive embed-responsive-16by9">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/7VtCewn4pB4" allowfullscreen></iframe>
+                            </div>
+                            <h2>Using Oracle and web design. </h2>
+                            <p>Redesigning an application with only JavaScript.</p>
+                        </div>
+                    </div>
+                    <div class="row slideanimXlr">
+                        <div class="col-sm-12"><div class="text-center"><h1><span class="glyphicon glyphicon-briefcase"></span> Additional Works</h1>
+                                <p><a href="http://www.tomassoantonio.com">Tomasso Antonnio - Responsive web design for a musician</a></p>
+                                <p><a href="assets/can-I-buy-it/index.html">Financial Affordability - A decision model to help determine how much one can afford..</a></p>
+                                <p><a href="http://www.swvmhi.dbhds.virginia.gov/swvmhi/default.asp">SWVMHI - Rebuilt a website for an institution. ( Outdated Project)</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- OTHER INFORMATION -->
+            <div id="contact" class="block-standard" style="margin-top: 25px;">
+                <div class="container-fluid text-center" style="padding-top: 100px; padding-bottom: 100px;">
+                    <div class="row"><div class="col-sm-12"><h1><i class="fa fa-user" aria-hidden="true"></i> CONTACT ME</h1></div></div>
+                    <div class="row">
+                        <div class="col-sm-3 slideanimXlr">
+                            <span class="glyphicon glyphicon-phone medium-icon "></span><br />
+                            <h1>PHONE</h1>
+                            <p><a href="tel:+1-540-285-0245">540.285.0245 (Personal)</a></p>
+                            <p><a href="tel:+1-434.395.2034">434.395.2034 (Work)</a></p>      
+                        </div>
+                        <div class="col-sm-3 slideanim">
+                            <span class="glyphicon glyphicon-envelope medium-icon "></span><br />
+                            <h1>EMAIL</h1>
+                            <p><a href="mailto:testermanmr@longwood.edu">testermanr@longwood.edu</a></p>
+                            <p><a href="mailto:mtesterman@radford.edu">mtesterman@radford.edu</a></p>
+                        </div>
+                        <div class="col-sm-3 slideanim">
+                            <span class="glyphicon glyphicon-user medium-icon "></span><br />
+                            <h1>SOCIAL MEDIA</h1>
+                            <p><i class="fa fa-linkedin-square"></i><a href="https://www.linkedin.com/in/matthewtesterman"> Linkedin</a></p>
+                            <p><i class="fa fa-youtube-square"></i><a href="https://www.youtube.com/channel/UCNUt0UVG3DDcsMPDgSZtX5Q"> Youtube</a></p>
+                        </div>
+                        <div class="col-sm-3 slideanimXrl">
+                            <span class="glyphicon glyphicon-file medium-icon"></span><br />
+                            <h1>RESUME</h1>
+                            <p><i class="fa fa-file-pdf-o"></i><a href="assets/resume-matthew-testerman.pdf"> Current Resume</a></p>
+                        </div>          
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="container-fluid text-center " style="padding-top: 20px; padding-bottom: 20px;">
+                <div class="row"><div class="col-sm-12"><h4>Copyright &copy; 2016. This website was created by Matthew Testerman. </h4></div></div>
+            </div>
+
+        </main>
+    </body>
+</html>

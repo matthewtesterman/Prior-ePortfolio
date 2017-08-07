@@ -1,0 +1,282 @@
+/*******************
+ * File Name: style.css
+ * Last Modified: 18-JUL-16
+ * Author: Matthew Testerman
+ * Description: Stylesheet for ep website.
+ *
+ ********************/
+html, body {
+    height: 100%;
+}
+
+body {
+    font-family: 'Abel', sans-serif;
+    background-color: #000000;	
+    color: #FFF;
+}
+
+p {
+    font-size: 16px;
+}
+
+a:link,a:active, a:hover, a:visited {
+	color:#FFF;
+}
+
+/* Classes */
+.main-image {
+    background: url('main-image.png') no-repeat;
+    -webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    height: auto;
+    margin:0;
+    padding:0px;
+}
+
+.block-standard {    
+    background:url(red-bg.png);
+    background-repeat: repeat;
+}
+
+.navbar {
+    background:	rgba(0,0,0,.5) ;
+    margin-bottom: 0;
+    border: 0;
+    font-size: 11px !important;
+    letter-spacing: 4px;
+  
+}
+
+.navbar li a, .navbar .navbar-brand { 
+    color: #d5d5d5 !important;
+}
+
+.navbar-nav li a:hover {
+    color: #fff !important;
+}
+
+.navbar-nav li.active a {
+    color: #fff !important;
+    background-color:#29292c !important;
+}
+
+.navbar-default .navbar-toggle {
+    border-color: transparent;
+}
+
+.open .dropdown-toggle {
+    color: #fff ;
+    background-color: #555 !important;
+}
+
+.dropdown-menu li a {
+    color: #000 !important;
+}
+
+.dropdown-menu li a:hover {
+    background-color: red !important;
+}
+
+.container {
+    padding: 80px 120px;
+}
+  
+.person {
+    border: 10px solid transparent;
+    margin-bottom: 25px;
+    width: 80%;
+    height: 80%;
+    opacity: 0.7;
+}
+
+.person:hover {
+    border-color: #f1f1f1;
+}
+
+.carousel-inner img {
+    width: 100%; 
+    margin: auto;
+}
+
+.carousel-caption h3 {
+    color: #fff !important;
+}
+
+@media (max-width: 600px) {
+    
+    .carousel-caption {
+         display: none; 
+    }
+    
+}
+
+.thumbnail{
+    background-color:transparent;
+    color:black;;
+    padding: 0 0 15px 0;
+    border: none;
+    border-radius: 0;
+}
+.thumbnail img {
+    width: 100%;
+    height: 100%;
+}
+
+.thumbnail-foot {	
+    background-color: #B50D00;
+    color: #FFF;
+    padding: 5px 0 5px 0;
+    background:url('red-bg.png'); 
+    background-repeat: repeat;
+}
+
+.medium-icon{
+font-size: 100px;
+color:inherit;
+margin-top:20px;
+}
+
+.slideanim {
+    visibility:hidden;
+}
+
+.slide {
+    animation-name: slide;
+    -webkit-animation-name: slide; 
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    visibility: visible; 
+}
+
+@keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    } 
+}
+
+@-webkit-keyframes slide {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateY(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateY(0%);
+    }
+}
+
+.slideanimXrl {
+    visibility:hidden;
+}
+
+.slideXrl {
+    animation-name: slideXrl;
+    -webkit-animation-name: slideXrl; 
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    visibility: visible; 
+}
+
+@keyframes slideXrl {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+    } 
+}
+
+@-webkit-keyframes slideXrl{
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(70%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+    }
+}
+
+.slideanimXlr {
+    visibility:hidden;
+}
+
+.slideXlr {
+    animation-name: slideXlr;
+    -webkit-animation-name: slideXlr; 
+    animation-duration: 1s; 
+    -webkit-animation-duration: 1s;
+    visibility: visible; 
+}
+
+@keyframes slideXlr {
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+    } 
+}
+
+@-webkit-keyframes slideXlr{
+    0% {
+        opacity: 0;
+        -webkit-transform: translateX(-100%);
+    } 
+    100% {
+        opacity: 1;
+        -webkit-transform: translateX(0%);
+    }
+}
+
+.videoWrapper {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    padding-top: 0;
+    height: 0;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 50px;
+}
+
+.videoWrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-nav li a img {
+    line-height: 50px;
+}
+.carousel-inner img {
+    width: 100%;
+    margin: auto;
+}
+.carousel-caption {
+    top: 38%;
+    transform: translateX(-20%);
+    bottom: auto;
+}
+
+/* IDs */
+#featureImage {
+    background-image: url('me.png');
+    background-size: cover;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: left top;
+    height: 700px;
+}
